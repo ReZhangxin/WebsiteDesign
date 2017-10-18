@@ -1,0 +1,44 @@
+.j_ad {
+    background: black; 
+}
+.j_ad .w {
+    height: 80px;
+    position: relative;
+    background: url(https://img13.360buyimg.com/da/jfs/t7846/91/4120906838/83704/621cd8da/59e418acN6fcd9851.jpg) no-repeat;
+}
+.ad_close{
+    font-size: 20px;
+    line-height: 20px;
+    color:gainsboro;
+    display: block;
+    position: absolute;
+    width: 20px;height: 20px;
+    top: 0;right: 0;
+    cursor: pointer;
+}
+
+header{
+    border-bottom: 1px solid #ddd;
+    background-color: #e3e4e5;
+    color: #999;
+}
+header .w {
+    height: 30px;
+    line-height:  30px;
+}
+.w .dt {
+    padding-left: 190px;
+}
+.nav li {
+    display: inline-block;
+    padding: 0 5px;
+    height: 100%;
+}
+.my_jd,.service,.other_website{
+    border: 1px solid transparent;
+}
+.my_jd:hover,.service:hover,.other_website:hover {
+    background: white;
+    border: 1px solid #e3e4e5;
+}
+
