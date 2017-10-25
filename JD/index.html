@@ -22,28 +22,32 @@
     <header>
         <div class="w">
             <div class="dt fl">
-                <span><i class="iconfont red">  </i>北京</span>
-                <div class="dd hide">
-                    <div clsaa="item" >北京</div>
-                    <div clsaa="item" >上海</div>
-                    <div clsaa="item" >天津</div><div clsaa="item" >重庆</div>
-                    <div clsaa="item" >河北</div><div clsaa="item" >山西</div>
-                    <div clsaa="item" >河南</div><div clsaa="item" >辽宁</div>
-                    <div clsaa="item" >吉林</div><div clsaa="item" >黑龙江</div>
-                    <div clsaa="item" >内蒙古</div><div clsaa="item" >江苏</div>
-                    <div clsaa="item" >山东</div><div clsaa="item" >安徽</div>
-                    <div clsaa="item" >浙江</div><div clsaa="item" >福建</div>
-                    <div clsaa="item" >湖北</div><div clsaa="item" >湖南</div>
-                    <div clsaa="item" >广东</div><div clsaa="item" >广西</div>
-                    <div clsaa="item" >江西</div><div clsaa="item" >四川</div>
-                    <div clsaa="item" >海南</div><div clsaa="item" >贵州</div>
-                    <div clsaa="item" >云南</div><div clsaa="item" >西藏</div>
-                    <div clsaa="item" >陕西</div><div clsaa="item" >甘肃</div>
-                    <div clsaa="item" >青海</div><div clsaa="item" >宁夏</div>
-                    <div clsaa="item" >新疆</div><div clsaa="item" >港澳</div>
-                    <div clsaa="item" >台湾</div><div clsaa="item" >钓鱼岛</div>
-                    <div clsaa="item" >海外</div>
+                <div class="cityChose">
+                    <i class="iconfont red">&nbsp; </i>
+                    <span class="nowCity">北京</span>
+                    <div class="dd ac hide">
+                        <div class="item selected" >北京</div>
+                        <div class="item" >上海</div>
+                        <div class="item" >天津</div><div class="item" >重庆</div>
+                        <div class="item" >河北</div><div class="item" >山西</div>
+                        <div class="item" >河南</div><div class="item" >辽宁</div>
+                        <div class="item" >吉林</div><div class="item" >黑龙江</div>
+                        <div class="item" >内蒙古</div><div class="item" >江苏</div>
+                        <div class="item" >山东</div><div class="item" >安徽</div>
+                        <div class="item" >浙江</div><div class="item" >福建</div>
+                        <div class="item" >湖北</div><div class="item" >湖南</div>
+                        <div class="item" >广东</div><div class="item" >广西</div>
+                        <div class="item" >江西</div><div class="item" >四川</div>
+                        <div class="item" >海南</div><div class="item" >贵州</div>
+                        <div class="item" >云南</div><div class="item" >西藏</div>
+                        <div class="item" >陕西</div><div class="item" >甘肃</div>
+                        <div class="item" >青海</div><div class="item" >宁夏</div>
+                        <div class="item" >新疆</div><div class="item" >港澳</div>
+                        <div class="item" >台湾</div><div class="item" >钓鱼岛</div>
+                        <div class="item" >海外</div>
+                    </div>
                 </div>
+                
             </div>
             <ul class="nav fr">             
                 <li><a href="javascript:">你好，请登录</a></li>
@@ -66,6 +70,11 @@
         // 去广告
         $('.ad_close').click(function(){
             $('.j_ad').fadeOut();
+        })
+        $('.dd .item').click(function(){
+            $(this).addClass('selected').siblings().removeClass('selected');
+            var text=$(this).text();
+            $('.nowCity').text(text);
         })
        
     </script>

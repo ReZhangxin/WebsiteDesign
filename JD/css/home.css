@@ -27,8 +27,48 @@ header .w {
     line-height:  30px;
 }
 .w .dt {
-    padding-left: 190px;
+    margin-left: 184px;
 }
+.cityChose {
+    display: inline-block;
+    height: 100%;
+    width: 60px;
+    border: 1px solid transparent;
+    position: relative;z-index: 2;
+}
+.cityChose:hover {
+    background:white;
+    border: 1px solid #ddd;
+    border-bottom:none;
+    position: relative;
+}
+.cityChose:after{
+    content:"";
+    position: absolute;
+    width:100%;height:1px;
+    background: white;
+    top:98%;
+    left:0;
+}
+.dt .dd {
+    width: 300px;position: absolute;
+    padding: 10px 0;
+    top: 31px;left: 0;
+    outline:1px solid #ddd;
+}
+.dt:hover .dd {
+    display: block;
+}
+.dd .item {
+    float: left;
+    width: 60px;
+    cursor: pointer;  
+}
+.item.selected {
+    background: red;
+    color:white;
+}
+
 .nav li {
     display: inline-block;
     padding: 0 5px;
