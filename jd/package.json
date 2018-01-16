@@ -1,0 +1,11 @@
+{
+  "name": "jd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server  --host=192.168.1.111"
+  },
+  "author": "",
+  "license": "ISC"
+}

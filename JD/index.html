@@ -1,82 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>京东商城</title>
-    <link rel="icon" href="./favicon.ico">
-    <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css/home.css">
+	<meta charset="UTF-8">
+	<!-- 视口属性变为移动页面 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>京东移动网站</title>
+	<link rel="stylesheet" href="./css/base.css">
+	<link rel="stylesheet" href="./css/index.css">
+	<script src="./js/jquery-1.11.3.min.js"></script>
+	<script src="./js/index.js"></script>
+	<script>
+		$('html').attr('style','font-size:'+$(window).width()/10+'px');
+	</script>
 </head>
 <body>
-    <!-- s 广告位 -->
-    <div class="j_ad">
-        <div class="w">
-            <i class="ad_close">×</i>
-        </div>
-    </div>
-    <!-- e 广告位 -->
-    
-    <!-- s 头部导航 -->
-    <header>
-        <div class="w">
-            <div class="dt fl">
-                <div class="cityChose">
-                    <i class="iconfont red">&nbsp; </i>
-                    <span class="nowCity">北京</span>
-                    <div class="dd ac hide">
-                        <div class="item selected" >北京</div>
-                        <div class="item" >上海</div>
-                        <div class="item" >天津</div><div class="item" >重庆</div>
-                        <div class="item" >河北</div><div class="item" >山西</div>
-                        <div class="item" >河南</div><div class="item" >辽宁</div>
-                        <div class="item" >吉林</div><div class="item" >黑龙江</div>
-                        <div class="item" >内蒙古</div><div class="item" >江苏</div>
-                        <div class="item" >山东</div><div class="item" >安徽</div>
-                        <div class="item" >浙江</div><div class="item" >福建</div>
-                        <div class="item" >湖北</div><div class="item" >湖南</div>
-                        <div class="item" >广东</div><div class="item" >广西</div>
-                        <div class="item" >江西</div><div class="item" >四川</div>
-                        <div class="item" >海南</div><div class="item" >贵州</div>
-                        <div class="item" >云南</div><div class="item" >西藏</div>
-                        <div class="item" >陕西</div><div class="item" >甘肃</div>
-                        <div class="item" >青海</div><div class="item" >宁夏</div>
-                        <div class="item" >新疆</div><div class="item" >港澳</div>
-                        <div class="item" >台湾</div><div class="item" >钓鱼岛</div>
-                        <div class="item" >海外</div>
-                    </div>
-                </div>
-                
-            </div>
-            <ul class="nav fr">             
-                <li><a href="javascript:">你好，请登录</a></li>
-                <li><a href="javascript:" class="red">免费注册</a></li> | 
-                <li><a href="javascript:">我的订单</a></li> | 
-                <li class="my_jd" ><a href="javascript:">我的京东<i class="iconfont"> </i></a></li> | 
-                <li><a href="javascript:">京东会员</a></li> | 
-                <li><a href="javascript:">企业采购</a></li> | 
-                <li class="service gray" ><a href="javascript:">客户服务<i class="iconfont"> </i></a></li> | 
-                <li class="other_website gray"><a href="javascript:">网站导航<i class="iconfont"> </i></a></li> | 
-                <li><a href="javascript:">手机京东</a></li>
-            </ul>
-        </div>
-    </header>
-    <!-- e 头部导航 -->
+	<!-- 最外层的容器盒子 -->
+	<div class="jd_container">
+		<!-- 顶部通栏 -->
+		<div class="jd_header">
+			<a href="javascript:" class="header_logo"></a>
+			<span class="header_glass"></span>
+			<input type="search" class="header_search" placeholder="请输入查询内容">
+			<a href="javascript:" class="header_login">登录</a>
+		</div>
+
+		<!-- 顶部轮播图 -->
+		<div class="jd_banner">
+			<ul class="banner_images clearfix">
+				<li><a href="#"><img src="images/l8.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/l1.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/l2.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/l3.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/l4.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/l5.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/l6.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/l7.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/l8.jpg" alt=""></a></li>
+				<li><a href="#"><img src="images/l1.jpg" alt=""></a></li>
+			</ul>
+			
+			<ul class="banner_index clearfix">
+				<li class="is-white"></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+
+		<!-- 导航栏 -->
+		<div class="jd_nav">
+			<ul class="clearfix">
+				<li>
+					<a href="#">
+						<img src="images/nav0.png" alt="">
+						<p>分类查询</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/nav1.png" alt="">
+						<p>分类查询</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/nav2.png" alt="">
+						<p>分类查询</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/nav3.png" alt="">
+						<p>分类查询</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/nav4.png" alt="">
+						<p>分类查询</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/nav5.png" alt="">
+						<p>分类查询</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/nav6.png" alt="">
+						<p>分类查询</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/nav7.png" alt="">
+						<p>分类查询</p>
+					</a>
+				</li>
+
+			</ul>
+		</div>
+
+		<!-- 主要内容区域 -->
+		<div class="jd_main">
+			<!-- 第一个盒子需要特殊设置 -->
+			<div class="main_content">
+				<div class="content_top clearfix">
+					<span></span>
+					<p>掌上秒杀</p>
+					<ul class="f_l clearfix">
+						<li>0</li>
+						<li>0</li>
+						<li>:</li>
+						<li>0</li>
+						<li>0</li>
+						<li>:</li>
+						<li>0</li>
+						<li>0</li>
+					</ul>
+					<a href="#" class="f_r">更多&gt;</a>
+				</div>
+				<div class="content_bottom">
+					<ul class="clearfix">
+						<li>
+							<a href="#"><img src="images/detail01.jpg" alt=""></a>
+							<p>￥10.00</p>
+							<p>￥100.0</p>
+						</li>
+						<li>
+							<a href="#"><img src="images/detail02.jpg" alt=""></a>
+							<p>￥10.00</p>
+							<p>￥100.0</p>
+						</li>
+						<li>
+							<a href="#"><img src="images/detail01.jpg" alt=""></a>
+							<p>￥10.00</p>
+							<p>￥100.0</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="main_content clearfix">
+				<div class="content_top"><span class="f_l">京东超市</span></div>
+				<div class="content_bottom">
+					<ul>
+						<li class="f_l b_r"><a href="#"><img src="images/cp1.jpg" alt=""></a></li>
+						<li class="f_r b_b"><a href="#"><img src="images/cp2.jpg" alt=""></a></li>
+						<li class="f_r"><a href="#"><img src="images/cp3.jpg" alt=""></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="main_content clearfix">
+				<div class="content_top"><span class="f_l">京东超市</span></div>
+				<div class="content_bottom">
+					<ul>
+						<li class="f_r b_l"><a href="#"><img src="images/cp1.jpg" alt=""></a></li>
+						<li class="f_l b_b"><a href="#"><img src="images/cp2.jpg" alt=""></a></li>
+						<li class="f_l"><a href="#"><img src="images/cp3.jpg" alt=""></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="main_content clearfix">
+				<div class="content_top"><span class="f_l">京东超市</span></div>
+				<div class="content_bottom">
+					<ul>
+						<li class="f_r b_l"><a href="#"><img src="images/cp1.jpg" alt=""></a></li>
+						
+						<li class="f_l b_b"><a href="#"><img src="images/cp3.jpg" alt=""></a></li>
+						<li class="f_l "><a href="#"><img src="images/cp2.jpg" alt=""></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	
 
 
-    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-    <script>
-        // 去广告
-        $('.ad_close').click(function(){
-            $('.j_ad').fadeOut();
-        })
-        $('.dd .item').click(function(){
-            $(this).addClass('selected').siblings().removeClass('selected');
-            var text=$(this).text();
-            $('.nowCity').text(text);
-        })
-       
-    </script>
 </body>
 </html>

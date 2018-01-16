@@ -1,56 +1,46 @@
-/*css 初始化 */
-html, body, div, h1, h2, h3, h4, h5, h6, p, dl, dt, dd, ol, ul, li, fieldset, form, label, input, 
-legend, table, caption, tbody, tfoot, thead, tr, th, td, textarea, article, aside, audio, canvas,
- figure, footer, header, mark, menu, nav, section, time, video { margin: 0; padding: 0; box-sizing: border-box; }
- *, *:before, *:after {
-    box-sizing: inherit;
+/* 通用样式 */
+*,::before, ::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	/* 去掉点击高亮效果 */
+	-webkit-tap-highlight-color: transparent;
+	font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
 }
-h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: normal }
-article, aside, dialog, figure, footer, header, hgroup, nav, section, blockquote { display: block; }
-ul, ol { list-style: none; }
-img { border: 0 none; vertical-align: top; }
-blockquote, q { quotes: none; }
-blockquote:before, blockquote:after, q:before, q:after { content: none; }
-table { border-collapse: collapse; border-spacing: 0; }
-strong, em, i { font-style: normal; font-weight: normal; }
-ins { text-decoration: underline; }
-del { text-decoration: line-through; }
-mark { background: none; }
-input::-ms-clear { display: none !important; }
-body { font: 12px/1.5 'Comic Sans MS',\5FAE\8F6F\96C5\9ED1/*微软雅黑*/, \5B8B\4F53,
-     "Hiragino Sans GB", STHeiti, "WenQuanYi Micro Hei", "Droid Sans Fallback", 
-     SimSun, sans-serif; background: #fff; }
-a { text-decoration: none; color: inherit; }
-a:hover { color: rgb(240, 32, 32); }
-
-/* 公共类 */
-.w {  /*版心 提取 */
-    width: 1190px;margin:0 auto;
+/* input去掉默认样式 */
+input {
+	border: none;
+	-webkit-appearance: none;
 }
-.fl {
-    float:left
+a {
+	text-decoration: none;
 }
-.fr {
-    float:right
+li {
+	list-style: none;
 }
-.al {
-    text-align:left
+.f_l {
+	float: left;
 }
-.ac {
-    text-align:center
+.f_r {
+	float: right;
 }
-.ar {
-    text-align:right
+.clearfix::before, .clearfix::after {
+	content: '';
+	display: block;
+	height: 0;
+	line-height: 0;
+	clear: both;
+	visibility: hidden;
 }
-.hide {
-    display:none
+.b_l {
+	border-left: 1px solid #ddd;
 }
-@font-face {
-    font-family: 'iconfont';
-    src: url("../font/iconfont.woff");
+.b_r {
+	border-right: 1px solid #ddd;
 }
-.red {color:red;}
-.gray {color:  #999!important;}
-.iconfont {
-    font-family: iconfont;
+.b_t {
+	border-top: 1px solid #ddd;
+}
+.b_b {
+	border-bottom: 1px solid #ddd;
 }
