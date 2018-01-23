@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "live-server  --host=192.168.1.111"
+    "dev": "live-server  "
   },
   "author": "",
   "license": "ISC"
